@@ -23,6 +23,7 @@ function setTheme(value) {
   themeToggle.setAttribute('aria-label', value === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
   document.querySelector('[data-demo="webb"]').src = `webb-${value}.html`;
   document.querySelector('[data-demo="raptor"]').src = `raptor-${value}.html`;
+  document.querySelector('[data-demo="vitrina"]').src = `vitrina-${value}.html`;
   void root.offsetHeight;
   requestAnimationFrame(() => root.classList.remove('no-transitions'));
 }
@@ -67,7 +68,7 @@ let transcriptTrigger;
 for (const button of document.querySelectorAll('[data-transcript]')) button.addEventListener('click', () => {
   transcriptTrigger = button;
   const topic = button.dataset.transcript;
-  document.querySelector('#transcript-title').textContent = topic === 'webb' ? 'James Webb' : 'Raptor 3';
+  document.querySelector('#transcript-title').textContent = ({webb: 'James Webb', raptor: 'Raptor 3', vitrina: 'Vitrina y PostgreSQL'})[topic];
   for (const item of transcript.querySelectorAll('pre')) item.hidden = item.id !== `transcript-${topic}`;
   transcript.hidden = false;
   document.querySelector('.frame').inert = true;

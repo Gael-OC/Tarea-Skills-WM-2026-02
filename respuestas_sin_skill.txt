@@ -39,3 +39,30 @@ Este diseño se llama combustión escalonada de flujo completo. «Flujo completo
 Para evitar que el motor se sobrecaliente, el metano frío también circula por conductos en las paredes de la cámara y la tobera. Allí absorbe calor antes de seguir su recorrido. A esto se le llama refrigeración regenerativa. Referencia técnica de NASA sobre el Raptor.
 
 Frente al Raptor 2, el Raptor 3 integra más componentes y sensores dentro del motor, tiene un sistema de encendido rediseñado y busca facilitar la reutilización. En su presentación de Starship V3 de mayo de 2026, SpaceX indicó unas 250 toneladas-fuerza de empuje para la versión de nivel del mar y 275 toneladas-fuerza para la versión de vacío, que tiene una tobera más grande. La versión de nivel del mar tiene una masa indicada de unos 1.525 kg. SpaceX: Introducing Starship V3.
+
+
+Prompt Proyecto Vitrina: Explícame cómo PostgreSQL guardaría las piezas de Vitrina.
+Respuesta Vitrina:
+En Vitrina, PostgreSQL guarda cada pieza como una fila en la tabla piezas. Esa fila contiene sus datos y referencias al usuario dueño y a la categoría. Tomando como implementado el modelo del [contrato de la API](/Users/gael/Documents/GitHub/Taller02-WB-202602/docs/contrato-api.md), una pieza podría verse así:
+Campo	Ejemplo	Para qué sirve
+id	3	Identifica la pieza.
+usuario_id	5	Apunta al dueño en la tabla usuarios.
+categoria_id	2	Apunta a la categoría en la tabla categorias.
+nombre	Game Boy DMG-01 con Tetris	Nombre visible de la pieza.
+descripcion	Funciona perfecto. Incluye el cartucho de Tetris.	Descripción escrita por el dueño.
+imagen_datos	Datos binarios de la foto	Guarda la imagen cuando el usuario sube un archivo.
+imagen_tipo	image/jpeg	Indica el formato de la imagen.
+imagen_url	Vacío en este ejemplo	Guarda una dirección cuando se usa una imagen por URL.
+creado_en	2026-10-26 13:03 UTC	Fecha en que se agregó.
+actualizado_en	2026-10-26 13:03 UTC	Fecha de la última modificación.
+
+
+Los números del ejemplo relacionan la pieza con otras tablas: usuario_id = 5 identifica al dueño y categoria_id = 2 identifica, por ejemplo, la categoría videojuegos. Las categorías disponibles son cartas, videojuegos, juguetes y vinilos.
+
+Cuando una persona agrega una pieza, Angular envía el formulario a FastAPI junto con su token de sesión. El backend identifica al usuario, valida los datos y guarda la pieza en PostgreSQL mediante SQLAlchemy. Así, la colección de un usuario se obtiene buscando las piezas cuyo usuario_id coincide con su identificador.
+
+Las fotos tienen dos formas de guardarse. Si el usuario sube una imagen, el backend la recibe en formato Base64 y guarda sus bytes y su tipo en PostgreSQL; acepta JPEG, PNG y WebP de hasta 2 MB. Si recibe una dirección web o una ruta, guarda esa dirección. Al consultar una pieza con una foto guardada en la base, la API entrega una URL como /api/piezas/3/imagen, que el navegador usa para cargarla.
+
+Los me gusta y favoritos se guardan en tablas separadas, llamadas megusta y guardados. Cada fila relaciona un usuario con una pieza y registra la fecha de la interacción. La combinación de ambos identificadores impide que una misma persona dé dos veces me gusta o guarde dos veces la misma pieza. Los totales se calculan al consultar; al eliminar la pieza, también se eliminan sus interacciones.
+
+Por último, en el entorno local PostgreSQL almacena sus datos en el volumen postgres_data de Docker. Eso permite que las piezas permanezcan al reiniciar los contenedores; ejecutar docker compose down -v también elimina ese volumen y sus datos.
