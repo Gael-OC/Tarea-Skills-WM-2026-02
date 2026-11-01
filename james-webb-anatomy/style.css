@@ -1,0 +1,54 @@
+.iso-page { margin: 70px auto 100px; }
+.intro { max-width: 700px; margin-bottom: 34px; }
+.eyebrow, .step-kicker { font: 10px/1.2 var(--anatomy-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--anatomy-muted); }
+.eyebrow span { padding: 0 .45em; }
+h1 { margin: 22px 0 15px; color: var(--anatomy-strong); font-size: clamp(40px, 7vw, 78px); line-height: 1.04; letter-spacing: -.055em; font-weight: 540; }
+h1 em { font-family: ui-serif, Georgia, serif; font-weight: 400; }
+.lead { max-width: 570px; color: var(--anatomy-text); font-size: clamp(16px, 2.1vw, 18px); line-height: 1.65; }
+.iso-figure { margin: 30px 0 18px; }
+.iso-plate { padding: 46px 24px 47px; }
+.iso-stage { user-select: none; touch-action: pan-y; }
+.iso-svg { max-width: 780px; }
+.iso-legend { margin-top: 14px; }
+.iso-caption { max-width: 700px; }
+.optical-ray { pointer-events: none; }
+.ray-track { fill: none; stroke: var(--anatomy-hi); stroke-width:.8; opacity:.12; }
+.ray-active { fill:none; stroke:var(--anatomy-lit); stroke-width:1.45; stroke-linecap:round; opacity:.75; }
+.photon-halo { fill: var(--anatomy-lit); opacity:.14; }
+.photon { fill: var(--anatomy-lit); }
+[data-component] { transition: opacity .35s ease; }
+[data-focus="shield"] [data-component="shield"] .iso-edge,
+[data-focus="mirror"] [data-component="mirror"] .iso-edge,
+[data-focus="secondary"] [data-component="secondary"] .iso-edge,
+[data-focus="instrument"] [data-component="instrument"] .iso-edge,
+[data-focus="instrument"] [data-component="aperture"] .iso-edge { stroke:var(--anatomy-lit); }
+.controls { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-top:28px; }
+.controls button { border:1px solid var(--anatomy-faint); color:var(--anatomy-text); background:transparent; padding:15px 12px; text-align:left; cursor:pointer; font:500 13px/1.2 ui-sans-serif,system-ui,sans-serif; transition:background .2s,border-color .2s,color .2s; }
+.controls button span { display:block; margin-bottom:9px; color:var(--anatomy-muted); font:10px/1 var(--anatomy-mono); }
+.controls button:hover,.controls button:focus-visible { border-color:var(--anatomy-hi); outline:none; color:var(--anatomy-strong); }
+.controls button[aria-pressed="true"] { color:var(--anatomy-strong); border-color:var(--anatomy-mid); background:var(--anatomy-face); }
+.controls button[aria-pressed="true"] span { color:var(--anatomy-strong); }
+.step-description { min-height:159px; padding:22px 0 8px; }
+.step-description h2,.story h2 { margin: 13px 0 9px; color:var(--anatomy-strong); font-weight:530; line-height:1.2; letter-spacing:-.025em; }
+.step-description h2 { font-size:clamp(22px, 3vw, 29px); }
+.step-description p:not(.step-kicker), .story p:not(.eyebrow) { max-width:720px; font-size:15px; line-height:1.75; margin:0; }
+.facts { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--anatomy-faint); border-bottom:1px solid var(--anatomy-faint); margin:30px 0 72px; }
+.facts div { display:flex; flex-direction:column; gap:5px; padding:22px 12px 22px 0; }
+.facts strong { color:var(--anatomy-strong); font-size:21px; font-weight:500; letter-spacing:-.03em; }
+.facts span { color:var(--anatomy-muted); font-size:12px; line-height:1.4; }
+.story { margin:0 0 54px; }
+.story h2 { font-size:clamp(26px, 4vw, 39px); }
+.story p:not(.eyebrow) { margin-top:15px; }
+.story strong { color:var(--anatomy-strong); font-weight:550; }
+.final-story { margin-bottom:70px; }
+footer { border-top:1px solid var(--anatomy-faint); padding-top:20px; display:flex; gap:40px; font-size:12px; color:var(--anatomy-muted); }
+footer div { display:flex; gap:10px 22px; flex-wrap:wrap; }
+footer a { color:var(--anatomy-text); text-decoration:none; border-bottom:1px solid var(--anatomy-lo); }
+footer a:hover { color:var(--anatomy-strong); }
+@media(max-width:560px) { .iso-page { margin: 42px auto 72px; } .iso-plate { padding:43px 9px 65px; } .iso-plate-corner { font-size:9px; } .controls { gap:5px; } .controls button { padding:12px 7px; font-size:11px; } .facts { grid-template-columns:repeat(2,1fr); gap:0 12px; margin-bottom:55px; } .facts div { padding:17px 0; } .step-description { min-height:180px; } footer { gap:15px; flex-direction:column; } }
+@media(prefers-reduced-motion:reduce) { [data-component] { transition:none; } }
+/* A slightly brighter mirror face keeps the segmented optical surface legible. */
+.iso[data-theme="dark"] [data-component="mirror"] .iso-shade { fill:#292929; }
+.iso[data-theme="dark"] [data-component="mirror"] .iso-top { fill:#303030; }
+.iso[data-theme="light"] [data-component="mirror"] .iso-shade { fill:#e5e5e2; }
+.iso[data-theme="light"] [data-component="mirror"] .iso-top { fill:#efefec; }

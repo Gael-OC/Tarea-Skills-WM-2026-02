@@ -1,0 +1,38 @@
+Respuesta James Webb:
+El James Webb funciona como una cámara espacial extraordinariamente sensible. Recoge luz que ha viajado por el universo, la concentra con sus espejos y la convierte en datos que los científicos usan para crear imágenes y estudiar estrellas, galaxias y planetas.
+
+Su recorrido básico es:
+
+Luz del espacio → espejos → instrumentos → datos → imágenes y mediciones
+
+Así funciona cada parte:
+1. Recibe principalmente luz infrarroja. Es un tipo de luz que nuestros ojos no pueden ver. Resulta muy útil porque puede atravesar ciertas nubes de polvo que bloquean la luz visible. Además, la luz de galaxias muy lejanas se ha estirado hacia el infrarrojo durante su viaje por la expansión del universo.
+2. La concentra con un espejo gigante. Su espejo principal mide unos 6,5 metros de ancho y está formado por 18 piezas hexagonales recubiertas de una fina capa de oro, que refleja bien el infrarrojo. Un espejo grande recoge más luz, así que permite detectar objetos muy tenues. La luz rebota hacia un espejo más pequeño y de ahí pasa a los instrumentos. NASA: los espejos del Webb.
+3. Se mantiene extremadamente frío. Los objetos calientes también emiten radiación infrarroja, incluido el propio telescopio. Para que ese brillo no tape las señales débiles del espacio, Webb tiene un parasol de cinco capas. Detrás de él, el telescopio funciona a menos de −223 °C. Está cerca de una zona llamada L2, a unos 1,5 millones de kilómetros de la Tierra, donde puede mantener el Sol, la Tierra y la Luna del mismo lado del parasol. NASA: cómo se mantiene frío.
+4. Sus instrumentos registran y analizan la luz. Algunos forman imágenes. Otros separan la luz en un espectro, parecido a un arcoíris, para estudiar qué sustancias están presentes y obtener información sobre su temperatura o movimiento. Por ejemplo, cuando un planeta pasa frente a su estrella, parte de la luz atraviesa su atmósfera y puede revelar señales de ciertas moléculas. NASA: instrumentos científicos.
+Las imágenes de Webb muestran colores aunque gran parte de la luz captada sea invisible para nosotros. Para hacerlos visibles, los equipos asignan colores a distintas bandas infrarrojas y combinan los datos. Esos colores ayudan a distinguir estructuras y materiales; no necesariamente muestran lo que veríamos con nuestros ojos. NASA: cómo se crean las imágenes.
+
+Y hay una consecuencia fascinante: mirar lejos también es mirar al pasado. Si la luz de una galaxia tardó 13.000 millones de años en llegar, Webb la observa como era hace 13.000 millones de años.
+
+Respuesta Raptor 3:
+El Raptor 3 es un motor cohete de SpaceX que impulsa tanto al Super Heavy como a la nave Starship. Funciona quemando metano y oxígeno líquidos. Su particularidad es que aprovecha una primera combustión para mover las bombas del motor y después usa esos mismos gases para producir empuje.
+
+El proceso, simplificado, funciona así:
+1. Los líquidos salen de los estanques. El metano es el combustible y el oxígeno permite que se queme. Ambos se mantienen muy fríos para almacenarlos en estado líquido.
+2. Dos bombas aumentan su presión. Una impulsa el metano y otra el oxígeno hacia el motor. Necesitan mucha potencia porque deben alimentar una cámara que ya está a una presión enorme.
+3. Dos prequemadores mueven las bombas. Son pequeñas cámaras donde comienza la combustión:
+   - Uno mezcla mucho metano con poco oxígeno. Sus gases hacen girar la turbina conectada a la bomba de metano.
+   - El otro mezcla mucho oxígeno con poco metano. Sus gases mueven la turbina de la bomba de oxígeno.
+4. Las dos corrientes llegan a la cámara principal. Todavía contienen combustible u oxígeno sin reaccionar. Al reunirse, continúa la combustión y se generan gases muy calientes y a alta presión.
+5. La tobera acelera los gases hacia atrás. Al expulsarlos, el motor recibe una fuerza en sentido contrario que empuja el cohete hacia adelante. Funciona también en el vacío: no necesita apoyarse en el aire.
+El recorrido de las dos corrientes se puede imaginar así:
+Mucho metano + poco oxígeno
+       → prequemador → turbina de la bomba de metano  ─┐
+                                                      ├→ cámara → tobera → gases
+Mucho oxígeno + poco metano                            │
+       → prequemador → turbina de la bomba de oxígeno ─┘
+Este diseño se llama combustión escalonada de flujo completo. «Flujo completo» describe que el flujo principal de los propulsores pasa por los prequemadores y sus turbinas antes de llegar a la cámara principal; no significa que todo se queme en los prequemadores. Esto permite aprovechar una gran cantidad de gas para mover las turbinas, aunque requiere un motor complejo y materiales capaces de soportar condiciones extremas. NASA explica el principio del ciclo.
+
+Para evitar que el motor se sobrecaliente, el metano frío también circula por conductos en las paredes de la cámara y la tobera. Allí absorbe calor antes de seguir su recorrido. A esto se le llama refrigeración regenerativa. Referencia técnica de NASA sobre el Raptor.
+
+Frente al Raptor 2, el Raptor 3 integra más componentes y sensores dentro del motor, tiene un sistema de encendido rediseñado y busca facilitar la reutilización. En su presentación de Starship V3 de mayo de 2026, SpaceX indicó unas 250 toneladas-fuerza de empuje para la versión de nivel del mar y 275 toneladas-fuerza para la versión de vacío, que tiene una tobera más grande. La versión de nivel del mar tiene una masa indicada de unos 1.525 kg. SpaceX: Introducing Starship V3.

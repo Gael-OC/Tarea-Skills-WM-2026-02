@@ -1,0 +1,17 @@
+[
+  ["wait", 450],
+  ["eval", "(()=>{const r=document.querySelector('[data-ray]'), p=document.querySelector('[data-photon]'), e=r.getPointAtLength(r.getTotalLength()), error=Math.hypot(e.x-Number(p.getAttribute('cx')),e.y-Number(p.getAttribute('cy'))); if(error>.02) throw Error('Ray and photon diverge: '+error); return {phase:'entering',endpointError:error};})()"],
+  ["lines"],
+  ["key", "Enter", "[data-step='1']"],
+  ["wait", 350],
+  ["eval", "(()=>{const r=document.querySelector('[data-ray]'),p=document.querySelector('[data-photon]'),e=r.getPointAtLength(r.getTotalLength()),error=Math.hypot(e.x-Number(p.getAttribute('cx')),e.y-Number(p.getAttribute('cy')));if(error>.02||document.querySelector('[data-step=\"1\"]').getAttribute('aria-pressed')!=='true') throw Error('Reflection interaction or path failed: '+error);return {phase:'reflecting',endpointError:error};})()"],
+  ["wait", 1000],
+  ["lines"],
+  ["key", "Enter", "[data-step='2']"],
+  ["wait", 1000],
+  ["lines"],
+  ["key", "Enter", "[data-step='3']"],
+  ["wait", 700],
+  ["lines"],
+  ["eval", "(()=>{if(document.querySelector('.iso-stage').dataset.focus!=='shield')throw Error('Shield not selected');return {phase:'cooling',selected:document.querySelector('[data-step=\"3\"]').getAttribute('aria-pressed'),horizontalOverflow:document.documentElement.scrollWidth>innerWidth};})()"]
+]

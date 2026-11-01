@@ -1,0 +1,7 @@
+[
+ ["wait", 4200],
+ ["eval", "(()=>{if(document.querySelector('[data-step=\"0\"]').getAttribute('aria-pressed')!=='true')throw Error('Reduced motion unexpectedly touring');return {tour:'still'};})()"],
+ ["scroll", "[data-step='2']"],
+ ["click", "[data-step='2']"],
+ ["eval", "(()=>{const r=document.querySelector('[data-ray]'),p=document.querySelector('[data-photon]'),e=r.getPointAtLength(r.getTotalLength()),error=Math.hypot(e.x-Number(p.getAttribute('cx')),e.y-Number(p.getAttribute('cy')));if(error>.02||document.querySelector('.iso-stage').dataset.focus!=='instrument')throw Error('Reduced-motion selection or path failed');return {phase:'instrument',endpointError:error};})()"]
+]
