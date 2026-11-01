@@ -21,6 +21,7 @@ function setTheme(value) {
   for (const option of themeOptions) option.setAttribute('aria-pressed', String(option.dataset.themeChoice === value));
   themeToggle.textContent = value === 'dark' ? 'MODO CLARO' : 'MODO OSCURO';
   themeToggle.setAttribute('aria-label', value === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+  document.querySelector('[data-cover]').src = `raptor-${value}.html#portada`;
   document.querySelector('[data-demo="webb"]').src = `webb-${value}.html`;
   document.querySelector('[data-demo="raptor"]').src = `raptor-${value}.html`;
   document.querySelector('[data-demo="vitrina"]').src = `vitrina-${value}.html`;
