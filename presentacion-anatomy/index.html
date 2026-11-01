@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>Anatomy en acción — Presentación</title>
+  <link rel="stylesheet" href="presentation.css">
+  <script src="presentation.js" defer></script>
+</head>
+<body>
+  <main id="stage" class="stage" aria-label="Presentación Anatomy en acción">
+    <div class="frame" inert>
+      <header class="topline"><span>ANATOMY <span class="separator">/</span> ESTUDIO DE UNA SKILL</span><span>TALLER · IA Y DESARROLLO</span></header>
+      <div class="slides" id="slides">
+        <section class="slide cover" data-slide aria-label="1 de 10: Portada">
+          <div class="cover-copy">
+            <p class="eyebrow">UNA SKILL PARA AGENTES DE IA</p>
+            <h1>Anatomy<br><em>en acción</em></h1>
+            <p class="cover-lead">Una misma pregunta.<br>Dos formas de explicar.</p>
+            <div class="authors"><span>Gael Ortega</span><span>Martín Droguett</span><span>Catalina Galleguillos</span></div>
+          </div>
+          <figure class="cover-figure visual-plate">
+            <img data-dark="../james-webb-anatomy/shots/desktop.png" data-light="../james-webb-anatomy/shots/lines-light.png" src="../james-webb-anatomy/shots/desktop.png" alt="Ilustración isométrica del telescopio James Webb generada con Anatomy">
+          </figure>
+        </section>
+
+        <section class="slide about" data-slide aria-label="2 de 10: Qué es Anatomy" hidden>
+          <div class="heading"><p class="eyebrow">01 / LA SKILL</p><h2>Una idea técnica,<br><em>un objeto para explorar</em></h2></div>
+          <div class="about-layout">
+            <div class="about-statement"><p>Anatomy guía al agente para crear <strong>figuras técnicas interactivas</strong> que explican cómo funciona algo.</p><a class="text-link" href="https://github.com/wheresryan22/anatomy" target="_blank" rel="noopener noreferrer">github.com/wheresryan22/anatomy <span aria-hidden="true">↗</span></a></div>
+            <div class="spec-list"><div><span>01</span><p>Instrucciones<br><strong>SKILL.md</strong></p></div><div><span>02</span><p>Herramientas gráficas<br><strong>SVG · WebGL · 3D opcional</strong></p></div><div><span>03</span><p>Agentes compatibles<br><strong>Codex · Claude Code<br>OpenCode · Antigravity · MiniMax</strong></p></div></div>
+          </div>
+          <p class="footnote">El repositorio contiene una skill; el profesor autorizó trabajar con una sola.</p>
+        </section>
+
+        <section class="slide install" data-slide aria-label="3 de 10: Integración con Codex" hidden>
+          <div class="heading"><p class="eyebrow">02 / INTEGRACIÓN</p><h2>De la instalación<br><em>a la pregunta</em></h2></div>
+          <div class="process">
+            <div class="process-step"><span class="step-number">01</span><div><h3>Instalar</h3><p>Comando documentado para Codex</p><code>npx skills add wheresryan22/anatomy -g -a codex</code></div></div>
+            <div class="process-step"><span class="step-number">02</span><div><h3>Abrir Codex</h3><p>El equipo trabajó en el entorno local</p></div></div>
+            <div class="process-step"><span class="step-number">03</span><div><h3>Invocar la skill</h3><p>Solicitar la figura con <code class="inline-code">$anatomy</code></p></div></div>
+          </div>
+          <div class="install-bottom"><p><span class="micro">ENTORNO UTILIZADO</span><strong>Codex local<br>GPT 6.1 Terra Max</strong></p><p class="footnote">El comando proviene del repositorio. Los archivos entregados no registran el método de instalación utilizado.</p></div>
+        </section>
+
+        <section class="slide alternatives" data-slide aria-label="4 de 10: Compatibilidad" hidden>
+          <div class="heading"><p class="eyebrow">03 / COMPATIBILIDAD</p><h2>Una skill, <em>varios agentes</em></h2></div>
+          <div class="compat-layout">
+            <div class="compat-column"><span class="micro">DOCUMENTADOS POR ANATOMY</span><h3>5 agentes</h3><p class="agent-names">Claude Code · Codex · OpenCode<br>Antigravity · MiniMax Code</p><p class="compat-note">OpenCode ofrece modelos gratuitos; Antigravity tiene un plan individual gratuito con límites.</p></div>
+            <div class="compat-column"><span class="micro">INSTALADOR DE AGENT SKILLS</span><h3>Más opciones</h3><p class="agent-names">Cline · Cursor · GitHub Copilot<br>Gemini CLI · Windsurf y otros</p><p class="compat-note">El instalador los admite; Anatomy no los documenta como probados. Cline ofrece modelos gratis; Copilot Free no incluye skills en IDE.</p></div>
+          </div>
+          <div class="compat-install"><div><span class="micro">ELEGIR AGENTE DURANTE LA INSTALACIÓN</span><code>npx skills add wheresryan22/anatomy</code></div><div class="compat-sources"><a href="https://github.com/wheresryan22/anatomy" target="_blank" rel="noopener noreferrer">Anatomy ↗</a><a href="https://github.com/vercel-labs/skills/blob/main/docs/agents.md" target="_blank" rel="noopener noreferrer">Lista de agentes ↗</a><a href="https://docs.cline.bot/core-workflows/task-management" target="_blank" rel="noopener noreferrer">Cline: modelos gratis ↗</a></div></div>
+        </section>
+
+        <section class="slide comparison" data-slide aria-label="5 de 10: Comparación James Webb" hidden>
+          <div class="slide-heading-row"><div><p class="eyebrow">04 / EXPERIMENTO</p><h2>James Webb</h2></div><span class="case-number">01 / 02</span></div>
+          <div class="prompt"><span class="micro">PROMPT</span><p>“Puedes explicarme cómo funciona el telescopio James Webb.”</p></div>
+          <div class="compare-grid">
+            <div class="compare-copy"><p class="micro">SIN ANATOMY <span>01</span></p><blockquote>“Recoge luz que ha viajado por el universo, la concentra con sus espejos y la convierte en datos…”</blockquote><p class="compare-note"><strong>Qué entrega:</strong> texto y un recorrido lineal de luz, espejos e instrumentos.</p><button class="transcript-open" data-transcript="webb" type="button">Leer respuesta completa <span aria-hidden="true">↗</span></button></div>
+            <div class="compare-image"><div class="compare-label micro">CON ANATOMY <span>02</span></div><img data-dark="../james-webb-anatomy/shots/desktop.png" data-light="../james-webb-anatomy/shots/lines-light.png" src="../james-webb-anatomy/shots/desktop.png" alt="Figura del James Webb con un rayo de luz ilustrado"><p><strong>Qué añade:</strong> figura y cuatro etapas que se pueden seleccionar.</p></div>
+          </div>
+        </section>
+
+        <section class="slide demo" data-slide aria-label="6 de 10: Demostración James Webb" hidden>
+          <div class="demo-copy"><p class="eyebrow">05 / DEMOSTRACIÓN</p><h2>Seguir la luz<br><em>paso a paso</em></h2><p class="demo-description">Selecciona una etapa para seguir el recorrido de la luz o destacar el parasol.</p><p class="demo-instruction"><span aria-hidden="true">→</span> Interactúa con los controles de la figura</p><p class="small-note">La trayectoria es ilustrativa y no está a escala.</p></div>
+          <div class="embedded-demo"><iframe title="Demostración interactiva del telescopio James Webb" data-demo="webb" src="webb-dark.html"></iframe></div>
+        </section>
+
+        <section class="slide comparison" data-slide aria-label="7 de 10: Comparación Raptor 3" hidden>
+          <div class="slide-heading-row"><div><p class="eyebrow">06 / EXPERIMENTO</p><h2>Raptor 3</h2></div><span class="case-number">02 / 02</span></div>
+          <div class="prompt"><span class="micro">PROMPT</span><p>“Puedes explicarme cómo funciona el Raptor 3 de SpaceX.”</p></div>
+          <div class="compare-grid">
+            <div class="compare-copy"><p class="micro">SIN ANATOMY <span>01</span></p><blockquote>“Dos prequemadores mueven las bombas.”</blockquote><p class="compare-note"><strong>Qué entrega:</strong> texto y un esquema del recorrido de los gases.</p><button class="transcript-open" data-transcript="raptor" type="button">Leer respuesta completa <span aria-hidden="true">↗</span></button></div>
+            <div class="compare-image"><div class="compare-label micro">CON ANATOMY <span>02</span></div><img class="raptor-image" data-dark="../raptor-3/shots/detalle-oscuro.png" data-light="../raptor-3/shots/detalle-claro.png" src="../raptor-3/shots/detalle-oscuro.png" alt="Detalle de la figura isométrica del motor"><p><strong>Qué añade:</strong> piezas seleccionables y encendido ilustrativo.</p></div>
+          </div>
+        </section>
+
+        <section class="slide demo" data-slide aria-label="8 de 10: Demostración Raptor y límites" hidden>
+          <div class="demo-copy"><p class="eyebrow">07 / DEMOSTRACIÓN</p><h2>Explorar<br><em>el motor</em></h2><p class="demo-description">Selecciona sus conjuntos o activa el encendido ilustrativo.</p><div class="caveat"><span class="micro">ALCANCE DE LA FIGURA</span><p>Reutiliza geometría de un ejemplo de Raptor 2 para explicar el ciclo. No reproduce con exactitud la geometría ni el rendimiento del Raptor 3.</p></div></div>
+          <div class="embedded-demo"><iframe title="Demostración interactiva del motor Raptor" data-demo="raptor" src="raptor-dark.html"></iframe></div>
+        </section>
+
+        <section class="slide contribution" data-slide aria-label="9 de 10: Qué aportó Anatomy" hidden>
+          <div class="heading"><p class="eyebrow">08 / ANÁLISIS</p><h2>¿Qué aportó <em>la skill?</em></h2></div>
+          <div class="comparison-table" role="table" aria-label="Comparación de los resultados de los dos experimentos">
+            <div class="comparison-row table-head" role="row"><span role="columnheader">ASPECTO</span><span role="columnheader">SIN SKILL</span><span role="columnheader">CON ANATOMY</span></div>
+            <div class="comparison-row" role="row"><strong role="rowheader">Resultado</strong><span role="cell">Explicación y esquemas en texto</span><span role="cell">Página HTML con figura SVG</span></div>
+            <div class="comparison-row" role="row"><strong role="rowheader">Exploración</strong><span role="cell">Lectura y esquemas en texto</span><span role="cell">Selección de etapas y piezas</span></div>
+            <div class="comparison-row" role="row"><strong role="rowheader">Uso posterior</strong><span role="cell">Consultar y compartir la respuesta</span><span role="cell">Incorporar una explicación visual en una página</span></div>
+          </div>
+          <p class="contribution-foot">Resultados de dos pruebas; no se documentaron todas las condiciones. No medimos tiempo, tokens ni precisión.</p>
+        </section>
+
+        <section class="slide conclusion" data-slide aria-label="10 de 10: Conclusión" hidden>
+          <div class="heading"><p class="eyebrow">09 / CONCLUSIÓN</p><h2>Una respuesta que<br><em>también se explora</em></h2></div>
+          <div class="conclusion-columns"><div><span class="micro">SIN LA SKILL</span><h3>Leer</h3><p>Una explicación textual organiza la información y describe el funcionamiento.</p></div><div><span class="micro">CON ANATOMY</span><h3>Explorar</h3><p>El agente creó figuras interactivas para recorrer componentes y etapas.</p></div><div><span class="micro">PARA SOFTWARE</span><h3>Aplicar</h3><p>Puede servir para documentar y explicar sistemas o conceptos complejos.</p></div></div>
+          <div class="conclusion-foot"><p>En estos experimentos, Anatomy aportó una forma de explorar y reutilizar la explicación. Su utilidad en nuestro proyecto de software queda por evaluar.</p><a href="https://github.com/wheresryan22/anatomy" target="_blank" rel="noopener noreferrer">Repositorio ↗</a></div>
+        </section>
+      </div>
+      <footer class="bottomline"><span id="slide-label" aria-live="polite">01 / 10</span><div class="footer-actions"><button type="button" class="fullscreen-toggle">PANTALLA COMPLETA</button><button type="button" id="theme-toggle" aria-label="Cambiar a modo claro">MODO CLARO</button><span class="keyboard-hint">← → NAVEGAR</span><div class="nav"><button type="button" id="previous" aria-label="Diapositiva anterior" disabled>←</button><button type="button" id="next" aria-label="Diapositiva siguiente">→</button></div></div></footer>
+    </div>
+    <div class="transcript" id="transcript" role="dialog" aria-modal="true" aria-labelledby="transcript-title" hidden>
+      <div class="transcript-inner"><div class="transcript-header"><div><p class="eyebrow">RESPUESTA ORIGINAL / SIN ANATOMY</p><h2 id="transcript-title"></h2></div><button type="button" id="transcript-close" aria-label="Cerrar respuesta">Cerrar ✕</button></div><div class="transcript-body" tabindex="0"><pre id="transcript-webb" hidden>El James Webb funciona como una cámara espacial extraordinariamente sensible. Recoge luz que ha viajado por el universo, la concentra con sus espejos y la convierte en datos que los científicos usan para crear imágenes y estudiar estrellas, galaxias y planetas.
+
+Su recorrido básico es:
+
+Luz del espacio → espejos → instrumentos → datos → imágenes y mediciones
+
+Así funciona cada parte:
+1. Recibe principalmente luz infrarroja. Es un tipo de luz que nuestros ojos no pueden ver. Resulta muy útil porque puede atravesar ciertas nubes de polvo que bloquean la luz visible. Además, la luz de galaxias muy lejanas se ha estirado hacia el infrarrojo durante su viaje por la expansión del universo.
+2. La concentra con un espejo gigante. Su espejo principal mide unos 6,5 metros de ancho y está formado por 18 piezas hexagonales recubiertas de una fina capa de oro, que refleja bien el infrarrojo. Un espejo grande recoge más luz, así que permite detectar objetos muy tenues. La luz rebota hacia un espejo más pequeño y de ahí pasa a los instrumentos. NASA: los espejos del Webb.
+3. Se mantiene extremadamente frío. Los objetos calientes también emiten radiación infrarroja, incluido el propio telescopio. Para que ese brillo no tape las señales débiles del espacio, Webb tiene un parasol de cinco capas. Detrás de él, el telescopio funciona a menos de −223 °C. Está cerca de una zona llamada L2, a unos 1,5 millones de kilómetros de la Tierra, donde puede mantener el Sol, la Tierra y la Luna del mismo lado del parasol. NASA: cómo se mantiene frío.
+4. Sus instrumentos registran y analizan la luz. Algunos forman imágenes. Otros separan la luz en un espectro, parecido a un arcoíris, para estudiar qué sustancias están presentes y obtener información sobre su temperatura o movimiento. Por ejemplo, cuando un planeta pasa frente a su estrella, parte de la luz atraviesa su atmósfera y puede revelar señales de ciertas moléculas. NASA: instrumentos científicos.
+Las imágenes de Webb muestran colores aunque gran parte de la luz captada sea invisible para nosotros. Para hacerlos visibles, los equipos asignan colores a distintas bandas infrarrojas y combinan los datos. Esos colores ayudan a distinguir estructuras y materiales; no necesariamente muestran lo que veríamos con nuestros ojos. NASA: cómo se crean las imágenes.
+
+Y hay una consecuencia fascinante: mirar lejos también es mirar al pasado. Si la luz de una galaxia tardó 13.000 millones de años en llegar, Webb la observa como era hace 13.000 millones de años.</pre><pre id="transcript-raptor" hidden>El Raptor 3 es un motor cohete de SpaceX que impulsa tanto al Super Heavy como a la nave Starship. Funciona quemando metano y oxígeno líquidos. Su particularidad es que aprovecha una primera combustión para mover las bombas del motor y después usa esos mismos gases para producir empuje.
+
+El proceso, simplificado, funciona así:
+1. Los líquidos salen de los estanques. El metano es el combustible y el oxígeno permite que se queme. Ambos se mantienen muy fríos para almacenarlos en estado líquido.
+2. Dos bombas aumentan su presión. Una impulsa el metano y otra el oxígeno hacia el motor. Necesitan mucha potencia porque deben alimentar una cámara que ya está a una presión enorme.
+3. Dos prequemadores mueven las bombas. Son pequeñas cámaras donde comienza la combustión:
+   - Uno mezcla mucho metano con poco oxígeno. Sus gases hacen girar la turbina conectada a la bomba de metano.
+   - El otro mezcla mucho oxígeno con poco metano. Sus gases mueven la turbina de la bomba de oxígeno.
+4. Las dos corrientes llegan a la cámara principal. Todavía contienen combustible u oxígeno sin reaccionar. Al reunirse, continúa la combustión y se generan gases muy calientes y a alta presión.
+5. La tobera acelera los gases hacia atrás. Al expulsarlos, el motor recibe una fuerza en sentido contrario que empuja el cohete hacia adelante. Funciona también en el vacío: no necesita apoyarse en el aire.
+El recorrido de las dos corrientes se puede imaginar así:
+Mucho metano + poco oxígeno
+       → prequemador → turbina de la bomba de metano  ─┐
+                                                      ├→ cámara → tobera → gases
+Mucho oxígeno + poco metano                            │
+       → prequemador → turbina de la bomba de oxígeno ─┘
+Este diseño se llama combustión escalonada de flujo completo. «Flujo completo» describe que el flujo principal de los propulsores pasa por los prequemadores y sus turbinas antes de llegar a la cámara principal; no significa que todo se queme en los prequemadores. Esto permite aprovechar una gran cantidad de gas para mover las turbinas, aunque requiere un motor complejo y materiales capaces de soportar condiciones extremas. NASA explica el principio del ciclo.
+
+Para evitar que el motor se sobrecaliente, el metano frío también circula por conductos en las paredes de la cámara y la tobera. Allí absorbe calor antes de seguir su recorrido. A esto se le llama refrigeración regenerativa. Referencia técnica de NASA sobre el Raptor.
+
+Frente al Raptor 2, el Raptor 3 integra más componentes y sensores dentro del motor, tiene un sistema de encendido rediseñado y busca facilitar la reutilización. En su presentación de Starship V3 de mayo de 2026, SpaceX indicó unas 250 toneladas-fuerza de empuje para la versión de nivel del mar y 275 toneladas-fuerza para la versión de vacío, que tiene una tobera más grande. La versión de nivel del mar tiene una masa indicada de unos 1.525 kg. SpaceX: Introducing Starship V3.</pre></div><p class="transcript-foot">Texto íntegro de respuestas_sin_skill.txt · Desplázate para leer</p></div>
+    </div>
+    <div class="setup" id="setup" role="dialog" aria-modal="true" aria-labelledby="setup-title" aria-describedby="setup-description">
+      <div class="setup-inner"><p class="eyebrow">ANATOMY / PRESENTACIÓN</p><h2 id="setup-title">Antes de comenzar</h2><p id="setup-description">Elige el modo que mejor se vea en la pantalla.</p><div class="theme-options" role="group" aria-label="Modo de color"><button type="button" class="theme-option" data-theme-choice="dark" aria-pressed="true"><span class="theme-swatch dark-swatch" aria-hidden="true"></span><span>Oscuro</span><span class="choice-mark" aria-hidden="true">●</span></button><button type="button" class="theme-option" data-theme-choice="light" aria-pressed="false"><span class="theme-swatch light-swatch" aria-hidden="true"></span><span>Claro</span><span class="choice-mark" aria-hidden="true">●</span></button></div><button class="start-button" id="start" type="button">Comenzar presentación <span aria-hidden="true">→</span></button><button class="setup-fullscreen fullscreen-toggle" type="button">Entrar en pantalla completa ⤢</button><p class="setup-hint">Puedes cambiar el modo durante la presentación.</p></div>
+    </div>
+  </main>
+</body>
+</html>

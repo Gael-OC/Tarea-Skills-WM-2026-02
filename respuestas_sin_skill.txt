@@ -1,3 +1,4 @@
+Prompt James Webb: Puedes explicarme cómo funciona el telescopio James Webb.
 Respuesta James Webb:
 El James Webb funciona como una cámara espacial extraordinariamente sensible. Recoge luz que ha viajado por el universo, la concentra con sus espejos y la convierte en datos que los científicos usan para crear imágenes y estudiar estrellas, galaxias y planetas.
 
@@ -14,6 +15,8 @@ Las imágenes de Webb muestran colores aunque gran parte de la luz captada sea i
 
 Y hay una consecuencia fascinante: mirar lejos también es mirar al pasado. Si la luz de una galaxia tardó 13.000 millones de años en llegar, Webb la observa como era hace 13.000 millones de años.
 
+
+Prompt Raptor: Puedes explicarme cómo funciona el Raptor 3 de SpaceX.
 Respuesta Raptor 3:
 El Raptor 3 es un motor cohete de SpaceX que impulsa tanto al Super Heavy como a la nave Starship. Funciona quemando metano y oxígeno líquidos. Su particularidad es que aprovecha una primera combustión para mover las bombas del motor y después usa esos mismos gases para producir empuje.
 
