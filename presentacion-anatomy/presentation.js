@@ -70,7 +70,7 @@ for (const button of document.querySelectorAll('[data-transcript]')) button.addE
   transcriptTrigger = button;
   const topic = button.dataset.transcript;
   document.querySelector('#transcript-title').textContent = ({webb: 'James Webb', raptor: 'Raptor 3', vitrina: 'Vitrina y PostgreSQL'})[topic];
-  for (const item of transcript.querySelectorAll('pre')) item.hidden = item.id !== `transcript-${topic}`;
+  for (const item of transcript.querySelectorAll('.transcript-answer')) item.hidden = item.id !== `transcript-${topic}`;
   transcript.hidden = false;
   document.querySelector('.frame').inert = true;
   transcript.querySelector('.transcript-body').scrollTop = 0;

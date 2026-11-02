@@ -21,3 +21,5 @@
 .repo-tree{display:grid;grid-template-columns:max-content 1fr;column-gap:20px;row-gap:5px;margin:10px 0 0}
 .repo-tree dt{font:500 16px ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;color:var(--text)}
 .repo-tree dd{margin:0;font-size:16px;color:var(--muted)}
+
+.transcript-answer{font:20px/1.6 ui-sans-serif,system-ui,sans-serif;color:var(--text)}.transcript-answer[hidden]{display:none}.transcript-answer p{margin:0 0 18px}.transcript-answer h3{font-size:23px;margin:24px 0 12px}.transcript-answer ol,.transcript-answer ul{padding-left:1.5em;margin:0 0 20px}.transcript-answer li{padding-left:4px;margin-bottom:10px}.transcript-answer ul{margin:10px 0}.transcript-answer .flow-diagram{font:16px/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre;overflow:auto;background:var(--image);border:1px solid var(--line);padding:18px;margin:0 0 20px}.table-scroll{overflow-x:auto;margin:0 0 24px}.transcript-answer table{width:100%;border-collapse:collapse;font-size:18px;text-align:left}.transcript-answer th,.transcript-answer td{padding:10px 14px;border:1px solid var(--line);vertical-align:top}.transcript-answer th{background:var(--image);font-weight:600}
